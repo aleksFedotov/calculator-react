@@ -1,67 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
 
 :root,
-:root.themeOne {
-  /* backgrounds colors */
-  --bg-main: hsl(222, 26%, 31%);
-  --bg-toggle: hsl(223, 31%, 20%);
-  --bg-screen: hsl(224, 36%, 15%);
-
-  /* keys colors */
-  --color-one-bg: hsl(225, 21%, 49%);
-  --color-one-sh: hsl(224, 28%, 35%);
-
-  --color-two-bg: hsl(6, 63%, 50%);
-  --color-two-sh: hsl(6, 70%, 34%);
-
-  --color-three-bg: hsl(30, 25%, 89%);
-  --color-three-sh: hsl(28, 16%, 65%);
-
-  /* text */
-  --color-text-main: hsl(221, 14%, 31%);
-  --color-text-secondary: hsl(0, 0, 100%);
+:root.theme-1 {
+  --main-text: hsl(0, 0%, 100%);
+  --btn-del-res-text: hsl(0, 0%, 100%);
+  --btn-main-text: hsl(221, 14%, 31%);
+  --main-background: hsl(222, 26%, 31%);
+  --screen-background: hsl(224, 36%, 15%);
+  --toggle-background: hsl(223, 31%, 20%);
+  --btn-main-background: hsl(30, 25%, 89%);
+  --btn-main-shadow: hsl(28, 16%, 65%);
+  --btn-del-res-background: hsl(225, 21%, 49%);
+  --btn-del-res-shadow: hsl(224, 28%, 35%);
+  --btn-equals-background: hsl(6, 63%, 50%);
+  --btn-equals-shadow: hsl(6, 70%, 34%);
 }
 
-:root.themeTwo {
-  /* backgrounds colors */
-  --bg-main: hsl(0, 0%, 90%);
-  --bg-toggle: hsl(0, 5%, 81%);
-  --bg-screen: hsl(0, 0%, 93%);
-
-  /* keys colors */
-  --color-one-bg: hsl(185, 42%, 37%);
-  --color-one-sh: hsl(185, 58%, 25%);
-
-  --color-two-bg: hsl(25, 98%, 40%);
-  --color-two-sh: hsl(25, 99%, 27%);
-
-  --color-three-bg: hsl(45, 7%, 89%);
-  --color-three-sh: hsl(35, 11%, 61%);
-
-  /* text */
-  --color-text-main: hsl(60, 10%, 19%);
-  --color-text-secondary: hsl(0, 0, 100%);
+:root.theme-2 {
+  --main-text: hsl(60, 10%, 19%);
+  --btn-main-text: hsl(60, 10%, 19%);
+  --equals-btn-text: hsl(0, 0%, 100%);
+  --main-background: hsl(0, 0%, 90%);
+  --screen-background: hsl(0, 0%, 93%);
+  --toggle-background: hsl(0, 5%, 81%);
+  --btn-main-background: hsl(45, 7%, 89%);
+  --btn-main-shadow: hsl(35, 11%, 61%);
+  --btn-del-res-background: hsl(185, 42%, 37%);
+  --btn-del-res-shadow: hsl(185, 58%, 25%);
+  --btn-equals-background: hsl(25, 98%, 40%);
+  --btn-equals-shadow: hsl(25, 99%, 27%);
 }
 
-:root.themeThree {
-  /* backgrounds colors */
-  --bg-main: hsl(268, 75%, 9%);
-  --bg-toggle: hsl(268, 71%, 12%);
-  --bg-screen: hsl(268, 71%, 12%);
-
-  /* keys colors */
-  --color-one-bg: hsl(281, 89%, 26%);
-  --color-one-sh: hsl(285, 91%, 52%);
-
-  --color-two-bg: hsl(176, 100%, 44%);
-  --color-two-sh: hsl(177, 92%, 70%);
-
-  --color-three-bg: hsl(268, 47%, 21%);
-  --color-three-sh: hsl(290, 70%, 36%);
-
-  /* text */
-  --color-text-main: hsl(52, 100%, 62%);
-  --color-text-secondary: hsl(0, 0, 100%);
+:root.theme-3 {
+  --main-text: hsl(52, 100%, 62%);
+  --btn-del-res-text: hsl(52, 100%, 62%);
+  --btn-main-text: hsl(52, 100%, 62%);
+  --equals-btn-text: hsl(198, 20%, 13%);
+  --main-background: hsl(268, 75%, 9%);
+  --screen-background: hsl(268, 71%, 12%);
+  --toggle-background: hsl(268, 71%, 12%);
+  --btn-main-background: hsl(268, 47%, 21%);
+  --btn-main-shadow: hsl(290, 70%, 36%);
+  --btn-del-res-background: hsl(281, 89%, 26%);
+  --btn-del-res-shadow: hsl(285, 91%, 52%);
+  --btn-equals-background: hsl(176, 100%, 44%);
+  --btn-equals-shadow: hsl(177, 92%, 70%);
 }
 
 *,
@@ -79,11 +62,11 @@ html {
 body {
   font-size: 3.2rem;
   line-height: 1.5;
-  font-family: 'Karla', sans-serif;
+  font-family: 'Spartan', sans-serif;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: var(--bg-main);
+  background-color: var(--main-background);
 }
