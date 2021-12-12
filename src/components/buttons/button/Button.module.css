@@ -1,0 +1,102 @@
+.btn {
+  cursor: pointer;
+  border: none;
+  background-color: var(--btn-main-background);
+  color: var(--btn-main-text);
+  font-size: 3.2rem;
+  width: 100%;
+  height: 6rem;
+
+  border-radius: 0.5rem;
+  font-weight: 700;
+  box-shadow: 0 0.5rem 0 0 var(--btn-main-shadow);
+}
+
+.btn:active {
+  transform: translateY(2px);
+  box-shadow: 0 0.2rem 0 0 var(--btn-main-shadow);
+}
+
+.one {
+  grid-area: one;
+}
+.two {
+  grid-area: two;
+}
+.three {
+  grid-area: three;
+}
+.four {
+  grid-area: four;
+}
+.five {
+  grid-area: five;
+}
+.six {
+  grid-area: six;
+}
+.seven {
+  grid-area: seven;
+}
+.eight {
+  grid-area: eight;
+}
+.nine {
+  grid-area: nine;
+}
+.zero {
+  grid-area: zero;
+}
+
+.decimal {
+  grid-area: decimal;
+}
+
+.add {
+  grid-area: add;
+}
+.subtract {
+  grid-area: subtract;
+}
+.multiply {
+  grid-area: multiply;
+}
+.divide {
+  grid-area: divide;
+}
+
+.delete,
+.reset,
+.equal {
+  font-size: 2rem;
+  color: var(--btn-del-res-text);
+  text-transform: uppercase;
+}
+
+.equal {
+  grid-area: equal;
+  color: var(--equals-btn-text) !important;
+  background: var(--btn-equals-background);
+  box-shadow: 0 0.5rem 0 0 var(--btn-equals-shadow);
+}
+
+.equal:active {
+  box-shadow: 0 0.2rem 0 0 var(--btn-equals-shadow);
+}
+
+.reset {
+  grid-area: reset;
+  background: var(--btn-del-res-background);
+  box-shadow: 0 0.5rem 0 0 var(--btn-del-res-shadow);
+}
+
+.delete {
+  grid-area: delete;
+  background: var(--btn-del-res-background);
+  box-shadow: 0 0.5rem 0 0 var(--btn-del-res-shadow);
+}
+
+.reset:active,
+.delete:active {
+  box-shadow: 0 0.2rem 0 0 var(--btn-del-res-shadow);
+}

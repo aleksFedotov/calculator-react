@@ -4,3 +4,9 @@
   height: 70rem;
   background-color: transparent;
 }
+
+@media (max-width: 580px) {
+  .calc {
+    width: 95vw;
+  }
+}

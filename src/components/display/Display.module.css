@@ -1,0 +1,34 @@
+.display {
+  width: 100%;
+  height: 12.5rem;
+  background-color: var(--screen-background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 1rem;
+  padding: 2.5rem;
+  color: var(--main-text);
+  margin-top: 3.2rem;
+}
+
+.previous_value {
+  font-size: 2rem;
+}
+
+.current_value {
+  font-size: 5rem;
+}
+
+@media (max-width: 500px) {
+  .display {
+    height: 9rem;
+  }
+
+  .previous_value {
+    font-size: 1.6rem;
+  }
+
+  .current_value {
+    font-size: 3.2rem;
+  }
+}
