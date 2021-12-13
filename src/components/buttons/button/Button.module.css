@@ -10,6 +10,7 @@
   border-radius: 0.5rem;
   font-weight: 700;
   box-shadow: 0 0.5rem 0 0 var(--btn-main-shadow);
+  transition: all 0.1s;
 }
 
 .btn:active {

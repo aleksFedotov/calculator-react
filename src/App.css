@@ -3,6 +3,7 @@
   max-width: calc(100% - 2rem);
   height: 70rem;
   background-color: transparent;
+  margin: 2rem;
 }
 
 @media (max-width: 580px) {
