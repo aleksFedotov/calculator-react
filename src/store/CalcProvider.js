@@ -7,13 +7,48 @@ const CalcProvider = (props) => {
   const [currentVal, setCurrentVal] = useState('');
   const [prevdVal, setPrevdVal] = useState('');
   const [storedOperator, setStoredOperator] = useState('');
-  const [currentOperation, setCurrentOperation] = useState('');
   const [result, setResult] = useState('');
 
-  // Key click
+  const compute = () => {
+    const a = parseFloat(prevdVal);
+    const b = parseFloat(currentVal);
+
+    if (isNaN(a) || isNaN(b)) return;
+
+    let result;
+    switch (storedOperator) {
+      case '+':
+        result = a + b;
+
+        break;
+      case '-':
+        result = a - b;
+
+        break;
+      case 'x':
+        result = a * b;
+
+        break;
+      case '/':
+        result = a / b;
+
+        break;
+      default:
+        return;
+    }
+
+    return result.toString().slice(0, 14);
+  };
+
+  // Key
 
   const numberClick = (num) => {
-    if (currentVal.length >= 8) return;
+    if (currentVal.length >= 12) return;
+    if (result) {
+      resetClick();
+      setCurrentVal(num);
+      return;
+    }
     if (currentVal === '0' || currentVal === '') {
       if (num === '.') {
         setCurrentVal('0.');
@@ -27,11 +62,12 @@ const CalcProvider = (props) => {
     }
   };
 
-  // Opertor click
+  // Opertor
 
   const operatorClick = (operator) => {
     if (result !== '') {
       setPrevdVal(result);
+      setStoredOperator(operator);
       setCurrentVal('');
       setResult('');
       return;
@@ -46,53 +82,36 @@ const CalcProvider = (props) => {
       setStoredOperator(operator);
 
       setCurrentVal('');
+      return;
     }
 
-    equalClick();
+    const res = compute();
+    setPrevdVal(res);
+    setCurrentVal('');
+    setStoredOperator(operator);
   };
 
-  const compute = (a, b) => {
-    let result;
-    switch (storedOperator) {
-      case '+':
-        result = a + b;
-        setResult(result.toString());
-        break;
-      case '-':
-        result = a - b;
-        setResult(result.toString());
-        break;
-      case 'x':
-        result = a * b;
-        setResult(result.toString());
-        break;
-      case '/':
-        result = a / b;
-        setResult(result.toString());
-        break;
-      default:
-        return;
-    }
-
-    return result;
-  };
+  // Equal
 
   const equalClick = () => {
-    const a = parseFloat(prevdVal);
-    const b = parseFloat(currentVal);
-
-    let result = compute(a, b);
+    let result = compute();
+    setResult(result);
   };
+
+  // Reset
 
   const resetClick = () => {
     setCurrentVal('');
     setPrevdVal('');
     setStoredOperator('');
-    setCurrentOperation('');
+
     setResult('');
   };
 
+  // Delete
+
   const deleteClick = () => {
+    if (result) return;
     setCurrentVal((prevState) => prevState.slice(0, -1));
   };
 
@@ -102,7 +121,6 @@ const CalcProvider = (props) => {
     <CactContext.Provider
       value={{
         currentVal,
-        currentOperation,
         storedOperator,
         prevdVal,
         result,
