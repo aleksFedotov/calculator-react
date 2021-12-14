@@ -115,8 +115,6 @@ const CalcProvider = (props) => {
     setCurrentVal((prevState) => prevState.slice(0, -1));
   };
 
-  useEffect(() => {}, [storedOperator]);
-
   return (
     <CactContext.Provider
       value={{
